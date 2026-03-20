@@ -1,400 +1,1345 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anirudh Kashyap — Director of Solutions Engineering, AI/ML SaaS. Builder of enterprise pre-sales organizations, $50M+ pipeline, 60% PoV close rate.">
+  <title>Anirudh Kashyap · Director of Solutions Engineering</title>
 
-  <head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>Learning to data science. One iteration at a time.</title>
+  <style>
+    /* ============================================================
+       DESIGN TOKENS — Option A: Dark / Premium Executive
+       ============================================================ */
+    :root {
+      --navy:         #0D1B2A;
+      --navy-card:    #1A2B3C;
+      --navy-light:   #243447;
+      --cream:        #F5F0E8;
+      --cream-muted:  #A8A099;
+      --gold:         #E8A838;
+      --gold-light:   #F5C96A;
+      --lavender:     #9B8CC4;
+      --green:        #2ed573;
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      --font-display: 'Outfit', system-ui, sans-serif;
+      --font-body:    'Outfit', system-ui, sans-serif;
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --transition: all 0.35s var(--ease);
 
-    <!-- Custom styles for this template -->
-    <link href="css/resume.min.css" rel="stylesheet">
+      --pad-section: 5.5rem 9%;
+    }
 
-  </head>
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
-  <body id="page-top">
+    body {
+      font-family: var(--font-body);
+      background: var(--navy);
+      color: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#hobbies">Hobbies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Books">Books</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    strong { color: var(--cream); font-weight: 600; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    <div class="container-fluid p-0">
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      padding: 1.1rem 9%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(13, 27, 42, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(232, 168, 56, 0.1);
+      transition: var(--transition);
+    }
 
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
 
-        <div class="my-auto">
-          <h1 class="mb-0">ANIRUDH
-            <span class="text-primary">KASHYAP</span>
-          </h1>
-          <div class="subheading mb-5">6301 Stevenson Avenue · Alexandria, VA 22304 · (720) 201-2517 ·
-            <a href="mailto:andykashyap@gmail.com">andykashyap-at-gmail.com</a>
-          </div>
-          <h3 class="mb-0">Personal Statement</h3>
-          <br>
-          <p class="mb-5">I am a data scientist, an engineer and an accomplished project leader with a 7-year proven track record of exceeding customer expectations, engineering products and launching them internationally. I am passionate about using data science to drive business, make better decisions and solve customer problems.</p>
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--cream-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--gold); text-decoration: none; }
 
-          <h3>Learning to data science. One iteration at a time.</h3>
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      padding: 0.45rem 1.15rem;
+      border-radius: 5px;
+      font-weight: 600 !important;
+      letter-spacing: 0.04em;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
 
-          <h5> Occassionally write about Data Science <a href = "https://medium.com/@andykashyap">here</a>
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--cream);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
 
-         
-          <br>
-          <br>
+    /* ============================================================
+       SHARED SECTION UTILITIES
+       ============================================================ */
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-eyebrow::before,
+    .section-eyebrow::after {
+      content: '';
+      height: 1px;
+      width: 2.5rem;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .section-eyebrow.left::before { display: none; }
+    .section-eyebrow.left::after  { display: none; }
+    .section-eyebrow.left {
+      justify-content: flex-start;
+      gap: 0.6rem;
+    }
+    .section-eyebrow.left::after { display: block; max-width: 2.5rem; }
 
-         <h3 style = "color:#FF9473;">Python | SQL | JMP | Tableau | Numpy | Sklearn | NLP | VBA </h3>
-          <br>
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .section-title em {
+      font-style: normal;
+      color: var(--gold);
+      font-weight: 800;
+    }
 
-          <ul class="list-inline list-social-icons mb-0">
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/andykashyap">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/kashyapandy/">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/KashyapAndy">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-        	</li>
-          </ul>
-        </div>
-      </section>
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .section-header-center .section-eyebrow { justify-content: center; }
+
+    /* ============================================================
+       ANIMATION — fade-up / slide-in
+       ============================================================ */
+    .fade-up, .fade-left {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    }
+    .fade-left {
+      transform: translateX(-28px);
+    }
+    .fade-up.visible, .fade-left.visible {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    /* stagger delays */
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+    .d5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.9rem;
+      border-radius: 5px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 168, 56, 0.25);
+      text-decoration: none;
+      color: var(--navy);
+    }
+    .btn-outline {
+      border: 1px solid rgba(245, 240, 232, 0.25);
+      color: var(--cream);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 7rem 9% 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle grid overlay */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(232, 168, 56, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 168, 56, 0.028) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+    }
+
+    /* Radial glow behind photo */
+    #hero::after {
+      content: '';
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(155, 140, 196, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 600px; }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 6vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-name-sub {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--cream-muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .tag {
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      border: 1px solid rgba(232, 168, 56, 0.3);
+      color: var(--gold);
+      background: rgba(232, 168, 56, 0.07);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Photo */
+    .hero-photo-wrap {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .hero-photo-ring {
+      position: relative;
+      width: clamp(260px, 28vw, 380px);
+      aspect-ratio: 1;
+    }
+
+    /* Spinning gradient ring */
+    @keyframes spin-ring { to { transform: rotate(360deg); } }
+
+    .hero-photo-ring::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        var(--gold) 0%,
+        var(--lavender) 40%,
+        transparent 60%,
+        var(--gold) 100%
+      );
+      animation: spin-ring 7s linear infinite;
+    }
+    .hero-photo-ring::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--navy);
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 7px;
+      z-index: 1;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+    }
+
+    /* Location badge */
+    .hero-badge {
+      background: var(--navy-card);
+      border: 1px solid rgba(232, 168, 56, 0.2);
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--cream-muted);
+      white-space: nowrap;
+    }
+    .hero-badge i { color: var(--gold); }
+
+    /* ============================================================
+       STATS BAR
+       ============================================================ */
+    #stats {
+      background: var(--navy-card);
+      border-top: 1px solid rgba(232, 168, 56, 0.09);
+      border-bottom: 1px solid rgba(232, 168, 56, 0.09);
+      padding: 3.5rem 9%;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .stat-item {
+      padding: 0.5rem 2rem;
+      text-align: center;
+      border-right: 1px solid rgba(232, 168, 56, 0.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:first-child { padding-left: 0; }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.5vw, 3.75rem);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 0.77rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-muted);
+    }
+
+    /* ============================================================
+       ABOUT / STORY
+       ============================================================ */
+    #about {
+      padding: var(--pad-section);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .story-text {
+      color: var(--cream-muted);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    .mantra-block {
+      margin: 2.25rem 0;
+      padding: 1.5rem 1.75rem;
+      border-left: 3px solid var(--gold);
+      background: rgba(232, 168, 56, 0.06);
+      border-radius: 0 8px 8px 0;
+    }
+    .mantra-block p {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.65;
+    }
+
+    /* Attribute cards — right column */
+    .about-right { padding-top: 0.5rem; }
+
+    .attr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .attr-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(232, 168, 56, 0.09);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: var(--transition);
+    }
+    .attr-card:hover {
+      border-color: rgba(232, 168, 56, 0.35);
+      transform: translateY(-3px);
+    }
+    .attr-icon  { display: none; }
+    .attr-title { font-weight: 700; font-size: 1rem; color: var(--cream); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .attr-desc  { font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6; }
+
+    /* ============================================================
+       EXPERIENCE / TIMELINE
+       ============================================================ */
+    #experience {
+      padding: var(--pad-section);
+      background: rgba(26, 43, 60, 0.45);
+    }
+
+    .chapter-group { margin-bottom: 2.5rem; }
+
+    .chapter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+    }
+    .ch-scientist  { background: rgba(155,140,196,0.12); color: var(--lavender); border: 1px solid rgba(155,140,196,0.28); }
+    .ch-consultant { background: rgba(232,168,56,0.1);   color: var(--gold);     border: 1px solid rgba(232,168,56,0.25); }
+    .ch-builder    { background: rgba(46,213,115,0.09);  color: var(--green);    border: 1px solid rgba(46,213,115,0.25); }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 2.25rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(232,168,56,0.6), rgba(232,168,56,0.05));
+    }
+
+    .t-item {
+      position: relative;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      transform: translateX(-18px);
+      transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+    }
+    .t-item.visible { opacity: 1; transform: translateX(0); }
+
+    .t-dot {
+      position: absolute;
+      left: -2.6rem;
+      top: 0.55rem;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--navy);
+      transition: var(--transition);
+    }
+    .t-item:hover .t-dot {
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(232,168,56,0.18);
+    }
+
+    .t-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(232,168,56,0.07);
+      border-radius: 12px;
+      padding: 1.65rem 1.75rem;
+      transition: var(--transition);
+    }
+    .t-card:hover {
+      border-color: rgba(232,168,56,0.22);
+      transform: translateX(5px);
+    }
+
+    .t-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .t-role {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.01em;
+    }
+
+    .t-date {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      padding: 0.2rem 0.7rem;
+      background: rgba(232,168,56,0.09);
+      border-radius: 100px;
+    }
+
+    .t-company {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--lavender);
+      margin-bottom: 1rem;
+    }
+    .t-company span { color: var(--cream-muted); font-weight: 400; font-size: 0.79rem; }
+
+    .t-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .t-bullets li {
+      font-size: 0.875rem;
+      color: var(--cream-muted);
+      padding-left: 1.3rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    .t-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 1rem;
+      top: -0.05rem;
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       KEY WINS
+       ============================================================ */
+    #wins { padding: var(--pad-section); }
+
+    .wins-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .win-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(232,168,56,0.08);
+      border-radius: 13px;
+      padding: 2rem 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .win-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--lavender));
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .win-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(232,168,56,0.22);
+    }
+    .win-card:hover::before { opacity: 1; }
+
+    .win-metric {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: -0.025em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .win-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .win-desc {
+      font-size: 0.81rem;
+      color: var(--cream-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       BEYOND WORK
+       ============================================================ */
+    #beyond {
+      padding: var(--pad-section);
+      background: rgba(26,43,60,0.45);
+    }
+
+    .beyond-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .beyond-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(155,140,196,0.1);
+      border-radius: 13px;
+      padding: 2rem 1.65rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .beyond-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(155,140,196,0.3);
+    }
+
+    .beyond-icon  { font-size: 2.1rem; display: block; margin-bottom: 0.9rem; }
+    .beyond-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .beyond-text {
+      font-size: 0.82rem;
+      color: var(--cream-muted);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       EDUCATION
+       ============================================================ */
+    #education { padding: var(--pad-section); }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .edu-card {
+      background: var(--navy-card);
+      border: 1px solid rgba(232,168,56,0.07);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: var(--transition);
+    }
+    .edu-card:hover { border-color: rgba(232,168,56,0.22); }
+
+    .edu-degree { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 0.2rem; }
+    .edu-school  { font-size: 0.88rem; font-weight: 500; color: var(--lavender); margin-bottom: 0.2rem; }
+    .edu-year    { font-size: 0.77rem; color: var(--cream-muted); }
+
+    /* ============================================================
+       CONTACT
+       ============================================================ */
+    #contact {
+      padding: var(--pad-section);
+      background: var(--navy-card);
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 4.5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--cream);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .contact-title em { font-style: normal; color: var(--gold); font-weight: 800; }
+
+    .contact-sub {
+      color: var(--cream-muted);
+      font-size: 1.02rem;
+      max-width: 520px;
+      margin: 0 auto 2.75rem;
+      line-height: 1.75;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 7px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid rgba(245,240,232,0.14);
+      color: var(--cream);
+      background: rgba(255,255,255,0.03);
+    }
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .social-btn.linkedin { background: rgba(0,119,181,0.12); border-color: rgba(0,119,181,0.35); }
+    .social-btn.linkedin:hover { background: rgba(0,119,181,0.22); color: #fff; border-color: #0077b5; }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      padding: 1.6rem 9%;
+      text-align: center;
+      font-size: 0.77rem;
+      color: rgba(168,160,153,0.45);
+      border-top: 1px solid rgba(232,168,56,0.06);
+    }
+    footer a { color: var(--gold); opacity: 0.7; }
+    footer a:hover { opacity: 1; }
+
+    /* ============================================================
+       SCROLL TO TOP
+       ============================================================ */
+    #back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      z-index: 100;
+    }
+    #back-top.show { opacity: 1; pointer-events: auto; }
+    #back-top:hover { background: var(--gold-light); transform: translateY(-3px); }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1100px) {
+      :root { --pad-section: 4.5rem 7%; }
+      #hero { grid-template-columns: 1fr; padding-top: 8rem; text-align: center; gap: 3rem; }
+      .hero-content { max-width: 100%; }
+      .hero-eyebrow, .hero-tags, .hero-actions { justify-content: center; }
+      .hero-tagline { margin: 0 auto 2rem; }
+      .hero-photo-wrap { order: -1; }
+      #about { grid-template-columns: 1fr; gap: 3.5rem; }
+      .wins-grid, .beyond-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(232,168,56,0.09); padding: 1.25rem; }
+      .stat-item:last-child, .stat-item:nth-child(2n) { border-bottom: none; }
+    }
+
+    @media (max-width: 700px) {
+      :root { --pad-section: 3.5rem 5%; }
+      nav { padding: 1rem 5%; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,27,42,0.97); padding: 1.5rem 5%; gap: 1.25rem; border-bottom: 1px solid rgba(232,168,56,0.1); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .wins-grid, .beyond-grid, .edu-grid, .attr-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .t-header { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===============================================================
+     NAVIGATION
+     =============================================================== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">Anirudh Kashyap</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#beyond">Beyond Work</a></li>
+    <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <i class="fa fa-bars"></i>
+  </button>
+</nav>
 
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
-    <h2 class="mb-5">Data Science Projects</h2>
+<!-- ===============================================================
+     HERO
+     =============================================================== -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Washington, DC Metro · Available for New Opportunities</div>
 
-    <div class="my-auto">
-          <h3 class="mb-02">The cost of owning my BMW 328i</h3>
-          <p>
-          <li>
-            How much does it cost to own a BMW 328i?
-          </li>
+    <h1 class="hero-name">Anirudh<br>Kashyap</h1>
 
-          <li>
-            I document every expense made on my car. Using mint and good ol' fashioned excel, I collected the cost of owning my car for the past 10 years. The results were interesting.
-          </li>
-          <li>I made a TABLEAU dashboard to analyze and document my findings. 
-          </li>
-          <br>
-           <a href="https://i.redd.it/ziqgt9mnmd411.png">Link to Dashboard</a>
-          <br>
-          <br>
-          <br>
-          <img src="img/BMW_HUD.png", width="650" height="390">
-          <br>
-          <br>          
-          <br>
-        </div>
+    <p class="hero-tagline">
+      Director of Solutions Engineering building enterprise AI/ML<br>
+      go-to-market engines from zero. I turn technical complexity<br>
+      into measurable revenue.
+    </p>
 
-    <div class="my-auto">
-          <h3 class="mb-02">Whisky pricing: A dram good case study</h3>
-          <p>
-            <b>In association with TheWhiskyExchange <a href = 'https://www.thewhiskyexchange.com/'>(TWE) </a>
-            </b>
-          <li>
-            Is the price of a whisky right? As a collector and a hobbyist, I set out to explore the factors that affect the price of a whisky. Is it the taste, is it the marketing, is it the looks?
-          </li>
-
-          <li>
-            The challenges in this project were EDA & deductive imputation. Majority of the time was spent filling NaN values, EDA and understading meaning from the dataset
-          </li>
-          <li>Since I needed a model that was interpretable by TWE, I used Logistic Regression as my base model and used GridSearchCV to hyperparameterize it. The end result was excellent and provided insight into the differences between a value brand vs a ultra premium brand. 
-          </li>
-           <li>Finally, with all these recommendations, I was able to conclude that distillery info, vintage, flavors, type of whisky etc are responsible for the price.
-          </li>
-          <li>I also did NLP on the comments to analyze what flavors are people talking about the most in whisky that are rated highest
-          </li>
-          <br>
-          <img src="img/WhiskyNotes.png", width="450" height="390">
-          <br>
-          <br>          
-          <br>
-          <p> <a href = "https://docs.google.com/presentation/d/1PZIv66O-Th-Dhih2fkdmeS_DpOkC_j_QzDeaEDObSXU/edit#slide=id.g2ce4d59dfa_0_716"> Link to the presentation </a>
-            <p> <a href = "https://github.com/KashyapAndy/Capstone_Project_AKA"> GitHub </a>
-          </p>
-        </div>
-
-          <br>          
-          <br>
-
-        <div class="my-auto">
-          <h3 class="mb-02">Analyzing Reddit FrontPage</h3>
-          <p>
-            <b>In this project we had to create a model that analyzes what makes a Reddit post successful</b>
-          <li>
-            Using Beautiful soup, I was able to build a scraper that scraped the top 250 pages of reddit every 8 hours and the created a dataset of reddit posts
-          </li>
-          <li>
-            By analyzing the attributes of the reddit post, using NLP on the titles and feature engineering several aspects of a reddit posts, I was able to conclude that the words that are currently in the news/events of the week or holiday words make a reddit post more successful
-          </li>
-          <li>Other conclusions included the fact that reddit posts are generally successful when created by 'power-users'. The models used in this project were RandomForest Classifier and Logistic Regression
-          </li>
-          <br>
-          <p> <a href = "https://docs.google.com/presentation/d/1NIADzPJzVINa1-WENVwAgTB7oTofjyO5znhlZWeqZAg/edit#slide=id.g2f81038c04_2_220"> Link to my presentation </a>
-            <p> <a href = "https://github.com/KashyapAndy/Reddit_Project"> GitHub </a>
-          </p>
-          <br>
-          <br>
-        </div>
-
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-          <h2 class="mb-5">Work Experience</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Analytics Consultant</h3>
-              <div class="subheading mb-3"><a href = "https://www2.deloitte.com/us/en.html">Deloitte Consulting</a></div>
-              <p>
-                <li>Lead Analytics consultant on the Bureau of Medicine and Surgery (BUMED) project. Successfully
-                    used python, tableau and other analytics technology to create deliverables and meet project goals</li>
-                <li>Created a Manning Dashboard using Tableau to provide an interface for senior leadership interact
-                    with data and understand their capability across 472 locations across the globe</li>
-                <li>Used regression to analyze and predict survey responses and co-author a whitepaper for senior
-                    leadership to understand the health of their organization</li>    
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">January 2018 - Present</span>
-              <br>
-              <span class="text-primary">Rosslyn, VA</span>
-            </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Project Lead</h3>
-              <div class="subheading mb-3"><a href = "https://www.atotech.com/">Atotech GmBH (Part of Total Oil)</a></div>
-              <p>
-                <li>Developed a stable process that beat the customer target requirement by over 10%. Lead engineer to hand off the process to suppliers such as Samsung, HTC, Unimicron at international sites</li>
-                <li>Improved copper adhesion performance by over 13% using A/B testing, Design of Experiments and other six sigma analyses</li>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">October 2012 - February 2017</span>
-              <br>
-              <span class="text-primary">Denver, CO</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Application Engineer</h3>
-              <div class="subheading mb-3"><a href = "https://www.atotech.com/">Atotech GmBH (Part of Total Oil)</a></div>
-              <p>
-                <li>Developed a stable process that beat the customer target requirement by over 10%. Lead engineer to hand off the process to suppliers such as Samsung, HTC, Unimicron at international sites</li>
-                <li>Improved copper adhesion performance by over 13% using A/B testing, Design of Experiments and other six sigma analyses</li>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">October 2012 - February 2017</span>
-              <br>
-              <span class="text-primary">Taiwan, Japan, Germany</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Process Engineer (II)</h3>
-              <div class="subheading mb-3"><a href = "http://www.cree.com/">CREE Inc.</a></div>
-              <p>
-                <li>Successfully achieved 18% brightness improvement for LED product launch by running 24x7 experiments. Launched the 231 lumens-per-watt LED, the brightest ever, in the year 2011</li>
-                <li> Part of the team that created the LED Lightbulb, now used by millions of customers</li>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2012 - October 2012</span>
-              <br>
-              <span class="text-primary">Durham, NC</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Process Engineer (I)</h3>
-              <div class="subheading mb-3"><a href = "http://www.cree.com/">CREE Inc.</a></div>
-              <p>
-                <li>Qualified rework process by interacting with international vendors and saved costs by 40%</li>
-                <li>Promoted by the Director of RD for exceptional performance and ‘do whatever it takes’ attitude</li>
-                <li>In 2011, <a href="http://www.businessinsider.com/companies-hardest-interview-process-2011-6"> CREE </a>was voted by Glassdoor as the company with the second hardest interviews in USA </li>
-
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2012 - October 2012</span>
-              <br>
-              <span class="text-primary">Durham, NC</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Process Engineering Intern</h3>
-              <div class="subheading mb-3"><a href = "https://www.formfactor.com/">FormFactor Inc.</a></div>
-              <p>
-                <li>Designed a next generation anode box by fixing 14 structural defects and reducing cost by 23% </li>
-                <li>Improved efficiency of electroplating process by creating automatic scripts that reduced task specific man hours by 65%</li>
-              </p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2008 - September 2008</span>
-              <br>
-              <span class="text-primary">Livermore, CA</span>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">General Assembly, Washington DC</h3>
-              <div class="subheading mb-3">Data Science Immersive</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2017 - December 2017</span>
-            </div>
-          </div>
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">University of California, Irvine</h3>
-              <div class="subheading mb-3">MS Chemical Engineering</div>
-              <p>GPA: 3.6/4.00</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2007 - December 2008</span>
-            </div>
-          </div>
-          <br>
-          <br>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">University of Mumbai</h3>
-              <div class="subheading mb-3">BE Chemical Engineering</div>
-              <p>First Class</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">June 2003 - September 2007</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="hobbies">
-        <div class="my-auto">
-          <h2 class="mb-5">Hobbies</h2>
-             <h4><li>
-              Data science</h4></li>
-            <h4><li>
-              Collecting Whisky</h4></li>
-            <h4><li>
-              Learning New Skills</h4></li>
-            <h4><li>
-              Snow boarding</h4></li>
-            <h4><li>
-              Staying Fit</h4></li>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Books">
-        <div class="my-auto">
-          <h2 class="mb-5">My 2018 Reading List</h2>
-             <li><a href = "https://smile.amazon.com/Kitchen-Confidential-Anthony-Bourdain-ebook/dp/B002UM5BXW/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1529254719&sr=1-1&keywords=kitchen+confidential">
-              Kitchen Confidential, by Anthony Bourdain</a> </li>
-            <li><a href = "https://smile.amazon.com/Hate-U-Give-Angie-Thomas-ebook/dp/B01M0614T9/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1529254701&sr=1-1&keywords=the+hate+you+give">
-              The Hate You Give, by Angie Thomas</a></li>
-            <li><a href = "https://smile.amazon.com/Way-Kings-Stormlight-Archive-Book-ebook/dp/B003P2WO5E?sa-no-redirect=1">
-              The Way of Kings, by Brandon Sanderson</a></li>
-            <li><a href = "https://smile.amazon.com/Higher-Loyalty-Truth-Lies-Leadership-ebook/dp/B074J6F41V/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1529254793&sr=1-1&keywords=a+higher+loyalty+by+james+comey">
-              A Higher Loyalty, by James Comey</a></li>
-            <li><a href = "https://smile.amazon.com/Words-Radiance-Stormlight-Archive-Book-ebook/dp/B00DA6YEKS/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1529254832&sr=1-1&keywords=words+of+radiance&dpID=51jVA6k9AUL&preST=_SY445_QL70_&dpSrc=srch">
-              The Words of Radiance, by Brandon Sanderson</a></li>
-            <li><a href = "https://smile.amazon.com/Born-Crime-Stories-African-Childhood/dp/B01IW9TM5O/ref=sr_1_1?ie=UTF8&qid=1533427076&sr=8-1&keywords=born+a+crime">
-              Born a Crime: Stories from a South African Childhood</a></li>
-            <li><a href = "https://smile.amazon.com/Eleanor-Oliphant-Completely-Fine-Novel/dp/B06XYT9CXZ/ref=sr_1_1?ie=UTF8&qid=1533427117&sr=1-1&keywords=eleanor+oliphant+is+completely+fine">
-              Eleanor Oliphant Is Completely Fine: A Novel</a></li>
-            <li><a href = "https://smile.amazon.com/Ready-Player-One/dp/B005HG7BWC/ref=sr_1_1?ie=UTF8&qid=1533427157&sr=1-1&keywords=ready+player+one">
-              Ready Player One</a></li>
-        </div>
-      </section>
-
+    <div class="hero-tags">
+      <span class="tag">AI/ML SaaS</span>
+      <span class="tag">Pre-Sales Leadership</span>
+      <span class="tag">Value Engineering</span>
+      <span class="tag">Enterprise GTM</span>
+      <span class="tag">Team Builder</span>
     </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="hero-actions">
+      <a href="https://www.linkedin.com/in/kashyapandy/" target="_blank" class="btn btn-gold">
+        <i class="fab fa-linkedin"></i> View LinkedIn
+      </a>
+      <a href="#experience" class="btn btn-outline">
+        <i class="fa fa-arrow-down"></i> See My Career
+      </a>
+      <a href="AnirudhKashyap_Resume.pdf" download class="btn btn-outline">
+        <i class="fa fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-ring">
+      <img src="img/profile.jpg" alt="Anirudh Kashyap — Professional Headshot" class="hero-photo">
+    </div>
+    <div class="hero-badge">
+      <i class="fa fa-map-marker-alt"></i> Washington, DC Metro
+    </div>
+  </div>
+</section>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/resume.min.js"></script>
 
-  </body>
 
+
+<!-- ===============================================================
+     ABOUT / STORY
+     =============================================================== -->
+<section id="about">
+  <!-- Left: narrative -->
+  <div>
+    <div class="section-eyebrow left">My Story</div>
+    <h2 class="section-title fade-up">From Mumbai to<br><em>building what didn't exist</em></h2>
+
+    <p class="story-text fade-up d1">
+      I grew up in Mumbai, earned an M.S. in Chemical Engineering from UC Irvine,
+      and spent the next fifteen years building expertise at the intersection of
+      deep engineering, data science, and enterprise sales.
+    </p>
+
+    <p class="story-text fade-up d2">
+      My career spans three chapters: <strong>Chemical Engineer</strong> — R&amp;D at Cree and Atotech
+      across the US, Taiwan, and Japan, delivering programs for Samsung and HTC.
+      <strong>Consultant</strong> — Deloitte analytics and digital transformation for US federal agencies.
+      <strong>Solutions Leadership</strong> — founding SE organizations from zero at two AI/ML SaaS
+      companies and scaling them to measurable ARR.
+    </p>
+
+    <p class="story-text fade-up d3">
+      I speak five languages, have led enterprise deals with Fortune 500 companies across North America,
+      Europe, and Asia, and believe the rarest skill in enterprise GTM is making
+      deeply technical products feel <em>inevitable</em> to a business buyer.
+    </p>
+  </div>
+
+  <!-- Right: attribute cards -->
+  <div class="about-right">
+    <div class="section-eyebrow left fade-up">What I Bring</div>
+    <div class="attr-grid">
+      <div class="attr-card fade-up d1">
+        <span class="attr-icon">🏗️</span>
+        <div class="attr-title">Builder Mentality</div>
+        <div class="attr-desc">Zero-to-one SE organizations at two AI/ML SaaS companies. I create from blank pages.</div>
+      </div>
+      <div class="attr-card fade-up d2">
+        <span class="attr-icon">🔬</span>
+        <div class="attr-title">Technical Depth</div>
+        <div class="attr-desc">M.S. Chemical Engineering + Data Science. Deep with engineers, clear to the C-suite.</div>
+      </div>
+      <div class="attr-card fade-up d3">
+        <span class="attr-icon">🌏</span>
+        <div class="attr-title">Global Experience</div>
+        <div class="attr-desc">US, Taiwan, Japan programs. 5 languages. Relationships at Samsung, HTC, Fortune 500s.</div>
+      </div>
+      <div class="attr-card fade-up d4">
+        <span class="attr-icon">📈</span>
+        <div class="attr-title">Revenue Impact</div>
+        <div class="attr-desc">Every role has a number attached. Pipeline, ARR, close rates — I track what matters.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===============================================================
+     EXPERIENCE — TIMELINE
+     =============================================================== -->
+<section id="experience">
+  <div class="section-header-center fade-up">
+    <div class="section-eyebrow">Career Timeline</div>
+    <h2 class="section-title">The <em>Arc</em></h2>
+  </div>
+
+  <!-- ── Chapter III: The Builder ───────────────────────────── -->
+  <div class="chapter-group">
+    <div class="chapter-pill ch-builder">Chapter III — Solutions Leadership</div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-header">
+            <div class="t-role">Director of Solutions</div>
+            <div class="t-date">Nov 2024 — Present</div>
+          </div>
+          <div class="t-company">Smartcat, Inc. <span>· AI-powered enterprise content &amp; localization platform (~$15–20M ARR)</span></div>
+          <ul class="t-bullets">
+            <li>Built enterprise SE org from zero — 3 SEs + 11 cross-functional reports across CS and Marketplace Ops</li>
+            <li>Designed Smartcat's Proof-of-Value framework achieving a <strong>60% PoV-to-close rate</strong>, influencing <strong>$5M+ in enterprise deal value</strong></li>
+            <li>Technical win owner across a <strong>$50M+ pipeline</strong> — API architecture, workflow mapping, multi-system solution design</li>
+            <li>Standardized RFI/RFP process — reduced response time from 2 weeks to <strong>under 3 days</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-header">
+            <div class="t-role">Director, AI Solutions Engineering</div>
+            <div class="t-date">Feb 2019 — Oct 2024</div>
+          </div>
+          <div class="t-company">Citrine Informatics <span>· AI/ML SaaS for materials &amp; chemicals (Series A–C, $0 → $15M ARR)</span></div>
+          <ul class="t-bullets">
+            <li>Founded and scaled global SE function — PhD-level team with <strong>zero attrition over 3 years</strong></li>
+            <li>Drove ARR from <strong>$0 to $15M+</strong> during COVID via demo, PoC, and value engineering frameworks</li>
+            <li>Created revenue-generating PoC offerings (MI-Demos, MI-Trials, MI-Workshops) — <strong>$3M+ in ARR</strong></li>
+            <li>Delivered solution roadmaps to VP- and C-level stakeholders at global Fortune 500 enterprises</li>
+            <li>Influenced 2020–2024 product roadmap via competitive evaluations and structured enterprise insights</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Chapter II: The Consultant ────────────────────────── -->
+  <div class="chapter-group">
+    <div class="chapter-pill ch-consultant">Chapter II — Consultant</div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-header">
+            <div class="t-role">Lead Analytics Consultant</div>
+            <div class="t-date">Dec 2017 — Jan 2019</div>
+          </div>
+          <div class="t-company">Deloitte Consulting <span>· Big 4 global management &amp; technology consulting</span></div>
+          <ul class="t-bullets">
+            <li>Led digital transformation for BUMED &amp; HHS — global workforce readiness platform in Tableau across <strong>472 worldwide locations</strong></li>
+            <li>Co-authored whitepaper for senior DoD leadership using regression analysis on organizational health data</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Chapter I: The Scientist ──────────────────────────── -->
+  <div class="chapter-group">
+    <div class="chapter-pill ch-scientist">Chapter I — Chemical Engineer</div>
+    <div class="timeline">
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-header">
+            <div class="t-role">Sr. Applications Engineer</div>
+            <div class="t-date">Oct 2012 — Feb 2017</div>
+          </div>
+          <div class="t-company">Atotech GmbH (Total Oil Subsidiary) <span>· Global PCB electroplating &amp; semiconductor chemistry</span></div>
+          <ul class="t-bullets">
+            <li>Led international engineering programs across <strong>US, Taiwan, and Japan</strong> — customers included Samsung, HTC</li>
+            <li>Delivered &gt;10% performance improvements across customer programs via DoE and A/B testing</li>
+            <li>Built a 1.5M-record R&amp;D database ("The Toolbox") from scratch — adopted globally to accelerate knowledge transfer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <div class="t-header">
+            <div class="t-role">R&amp;D Process Engineer (Level I → II)</div>
+            <div class="t-date">Jan 2010 — Sept 2012</div>
+          </div>
+          <div class="t-company">Cree, Inc. (now Wolfspeed) <span>· US market-leading innovator in LEDs &amp; GaN power devices</span></div>
+          <ul class="t-bullets">
+            <li>Achieved <strong>18% LED brightness improvement</strong> — contributed to the world-record 231 lm/W LED</li>
+            <li>Part of the team that launched the commercial 40W/100W LED bulb now used in homes globally</li>
+            <li>Promoted to Level II by Director of R&amp;D for exceptional performance and "do whatever it takes" attitude</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ===============================================================
+     BEYOND WORK
+     =============================================================== -->
+<section id="beyond">
+  <div class="section-header-center fade-up">
+    <div class="section-eyebrow">Beyond Work</div>
+    <h2 class="section-title">The <em>Person</em> Behind the Resume</h2>
+  </div>
+
+  <div class="beyond-grid">
+    <div class="beyond-card fade-up">
+      <span class="beyond-icon">🌏</span>
+      <div class="beyond-title">Global Operator</div>
+      <div class="beyond-text">Lived and worked across the US, Taiwan, and Japan. Conducted enterprise programs for Samsung, HTC, and Fortune 500 customers across three continents.</div>
+    </div>
+    <div class="beyond-card fade-up d1">
+      <span class="beyond-icon">🗣️</span>
+      <div class="beyond-title">5 Languages</div>
+      <div class="beyond-text">English, Hindi, Marathi, Mandarin, and French. Learned Mandarin to communicate directly with customers in Taiwan — and it changed how I build trust globally.</div>
+    </div>
+    <div class="beyond-card fade-up d2">
+      <span class="beyond-icon">🥃</span>
+      <div class="beyond-title">Whisky Enthusiast</div>
+      <div class="beyond-text">Built a data science project analyzing 1,500+ single malt whiskies from The Whisky Exchange — pricing, flavour profiles, and what drives premium positioning.</div>
+    </div>
+    <div class="beyond-card fade-up d3">
+      <span class="beyond-icon">📊</span>
+      <div class="beyond-title">Data Science Side Projects</div>
+      <div class="beyond-text">From whisky pricing models to Reddit front page analysis to a 10-year BMW ownership cost tracker — I build datasets out of things I'm curious about.</div>
+    </div>
+    <div class="beyond-card fade-up d4">
+      <span class="beyond-icon">🏔️</span>
+      <div class="beyond-title">Adventure &amp; Travel</div>
+      <div class="beyond-text">Skydiving, snowboarding, white-water rafting, hiking. Visited 10+ countries across Europe, Asia, and the Americas. Always looking for the next challenge.</div>
+    </div>
+    <div class="beyond-card fade-up d5">
+      <span class="beyond-icon">📚</span>
+      <div class="beyond-title">Continuous Learner</div>
+      <div class="beyond-text">From General Assembly's Data Science Immersive mid-career to self-teaching Mandarin to building new frameworks at every company — reinvention is a habit.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===============================================================
+     EDUCATION
+     =============================================================== -->
+<section id="education">
+  <div class="section-header-center fade-up">
+    <div class="section-eyebrow">Education</div>
+    <h2 class="section-title">The <em>Foundation</em></h2>
+  </div>
+
+  <div class="edu-grid">
+    <div class="edu-card fade-up">
+      <div class="edu-degree">MBA</div>
+      <div class="edu-school">Duke University, Fuqua School of Business</div>
+      <div class="edu-year">Cross Continent MBA Program</div>
+    </div>
+    <div class="edu-card fade-up d1">
+      <div class="edu-degree">M.S. Chemical Engineering</div>
+      <div class="edu-school">University of California, Irvine</div>
+      <div class="edu-year">2007 – 2009 · GPA 3.6 / 4.0</div>
+    </div>
+    <div class="edu-card fade-up d2">
+      <div class="edu-degree">B.E. Chemical Engineering — First Class</div>
+      <div class="edu-school">University of Mumbai</div>
+      <div class="edu-year">2003 – 2007</div>
+    </div>
+    <div class="edu-card fade-up d3">
+      <div class="edu-degree">Data Science Immersive</div>
+      <div class="edu-school">General Assembly, Washington DC</div>
+      <div class="edu-year">2017 · Full-time intensive program</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===============================================================
+     CONTACT
+     =============================================================== -->
+<section id="contact">
+  <div class="fade-up">
+    <h2 class="contact-title">Let's build something<br><em>great</em> together.</h2>
+    <p class="contact-sub">
+      Open to Director / VP of SE roles at AI/ML and enterprise SaaS companies
+      that value technical depth paired with real commercial impact.
+    </p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/kashyapandy/" target="_blank" class="social-btn linkedin">
+        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+      </a>
+      <a href="mailto:andykashyap@gmail.com" class="social-btn">
+        <i class="fa fa-envelope"></i> andykashyap@gmail.com
+      </a>
+      <a href="tel:7202012517" class="social-btn">
+        <i class="fa fa-phone"></i> 720.201.2517
+      </a>
+      <a href="AnirudhKashyap_Resume.pdf" download class="social-btn">
+        <i class="fa fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===============================================================
+     FOOTER
+     =============================================================== -->
+<footer>
+  <p>© 2026 Anirudh Kashyap · Washington, DC ·
+    <a href="https://github.com/KashyapAndy/profile-andykashyap">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/kashyapandy/">LinkedIn</a>
+  </p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="back-top" aria-label="Back to top">
+  <i class="fa fa-arrow-up"></i>
+</button>
+
+
+<!-- ===============================================================
+     JAVASCRIPT
+     =============================================================== -->
+<script>
+  // ── Intersection Observer: fade-up + timeline items ──────────
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up, .fade-left, .t-item').forEach(el => io.observe(el));
+
+  // ── Counter animation ─────────────────────────────────────────
+  function runCounter(el) {
+    const target = parseInt(el.dataset.target);
+    if (isNaN(target)) return;
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 1800;
+    const steps = 60;
+    const inc = target / steps;
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + inc, target);
+      el.textContent = prefix + Math.floor(current) + suffix;
+      if (current >= target) clearInterval(timer);
+    }, duration / steps);
+  }
+
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('[data-target]').forEach(runCounter);
+        statsObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  statsObs.observe(document.getElementById('stats'));
+
+  // ── Mobile nav toggle ─────────────────────────────────────────
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.innerHTML = navLinks.classList.contains('open')
+      ? '<i class="fa fa-times"></i>'
+      : '<i class="fa fa-bars"></i>';
+  });
+  // Close on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.innerHTML = '<i class="fa fa-bars"></i>';
+    });
+  });
+
+  // ── Active nav highlight ──────────────────────────────────────
+  const sections  = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }, { passive: true });
+
+  // ── Back to top ───────────────────────────────────────────────
+  const backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
 </html>
