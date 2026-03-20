@@ -24,7 +24,7 @@ A modern, accomplishment-driven portfolio built to attract senior enterprise rol
 | **About** | Career story across 3 chapters: Chemical Engineer → Consultant → Solutions Leadership |
 | **Experience** | Chronological timeline with metrics-driven bullet points |
 | **Beyond Work** | Personal interests presented professionally |
-| **Education** | Duke MBA · NC State ChE · General Assembly DS |
+| **Education** | M.S. ChE UC Irvine · B.S. ChE Mumbai · General Assembly DS |
 | **Contact** | Email, phone, LinkedIn, CV download |
 
 ---
