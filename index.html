@@ -967,6 +967,72 @@
     .social-btn.linkedin:hover { background: rgba(0,119,181,0.22); color: #fff; border-color: #0077b5; }
 
     /* ============================================================
+       WHAT I'M EXPLORING
+       ============================================================ */
+    #exploring {
+      padding: var(--pad-section);
+      background: var(--navy);
+    }
+
+    .log-list {
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .log-entry {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0 2.5rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid rgba(245,240,232,0.07);
+    }
+    .log-entry:last-child { border-bottom: none; }
+
+    .log-month {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: 0.15rem;
+    }
+
+    .log-bullets {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .log-bullets li {
+      font-size: 0.875rem;
+      color: var(--cream-muted);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .log-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(232,168,56,0.4);
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .log-entry {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+    }
+
+    /* ============================================================
        FOOTER
        ============================================================ */
     footer {
@@ -1045,6 +1111,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#beyond">Beyond Work</a></li>
+    <li><a href="#exploring">What I'm Exploring</a></li>
     <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -1445,7 +1512,7 @@
     <div class="beyond-card fade-up d5">
       <span class="beyond-icon">📚</span>
       <div class="beyond-title">Lifelong Learner</div>
-      <div class="beyond-text">From General Assembly's Data Science Immersive mid-career to self-teaching Mandarin to building new frameworks at every company — reinvention is a habit.</div>
+      <div class="beyond-text">For over a decade, I've made a habit of picking up 2–3 new skills every year — from learning to swim at 29 after nearly drowning as a kid, to going from 125 to 180 lbs through strength training, to picking up golf and the craft of parenting in 2025. Reinvention isn't a reset; it's a rhythm.</div>
     </div>
     <div class="beyond-card map-card fade-up d6">
       <div class="map-card-header">
@@ -1454,6 +1521,43 @@
       </div>
       <div id="travel-map"></div>
     </div>
+  </div>
+</section>
+
+
+<!-- ===============================================================
+     WHAT I'M EXPLORING
+     =============================================================== -->
+<section id="exploring">
+  <div class="section-header-center fade-up">
+    <div class="section-eyebrow">AI Learning Log</div>
+    <h2 class="section-title">What I'm <em>Exploring</em></h2>
+  </div>
+
+  <div class="log-list">
+
+    <div class="log-entry fade-up">
+      <div class="log-month">Apr 2025</div>
+      <ul class="log-bullets">
+        <li>Built a HEIC to JPG batch converter using Claude Code — to upload photos to marketplace listings and eBay</li>
+      </ul>
+    </div>
+
+    <div class="log-entry fade-up">
+      <div class="log-month">Mar 2025</div>
+      <ul class="log-bullets">
+        <li>Built this portfolio site end-to-end using Claude Code — zero boilerplate, all conversation</li>
+      </ul>
+    </div>
+
+    <div class="log-entry fade-up">
+      <div class="log-month">Feb 2025</div>
+      <ul class="log-bullets">
+        <li>Built Soundburst, an AI-powered audio tool</li>
+        <li>Revamped GitHub profile — cleaned up repos, curated public presence</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
