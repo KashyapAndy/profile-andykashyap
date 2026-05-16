@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,18 +20,18 @@
 
   <style>
     /* ============================================================
-       DESIGN TOKENS — Option A: Dark / Premium Executive
+       DESIGN TOKENS — Warm Olive
        ============================================================ */
     :root {
-      --navy:         #0D1B2A;
-      --navy-card:    #1A2B3C;
-      --navy-light:   #243447;
-      --cream:        #F5F0E8;
-      --cream-muted:  #A8A099;
-      --gold:         #E8A838;
-      --gold-light:   #F5C96A;
-      --lavender:     #9B8CC4;
-      --green:        #2ed573;
+      --navy:         #FAF7F2;
+      --navy-card:    #FFFFFF;
+      --navy-light:   #F0EBE0;
+      --cream:        #1C1917;
+      --cream-muted:  #78716C;
+      --gold:         #4D7C0F;
+      --gold-light:   #65A30D;
+      --lavender:     #B45309;
+      --green:        #15803D;
 
       --font-display: 'Outfit', system-ui, sans-serif;
       --font-body:    'Outfit', system-ui, sans-serif;
@@ -71,10 +71,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(13, 27, 42, 0.88);
+      background: rgba(250, 247, 242, 0.92);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(232, 168, 56, 0.1);
+      border-bottom: 1px solid rgba(77, 124, 15, 0.12);
+      box-shadow: 0 1px 24px rgba(77, 124, 15, 0.06);
       transition: var(--transition);
     }
 
@@ -219,12 +220,12 @@
     .btn-gold:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(232, 168, 56, 0.25);
+      box-shadow: 0 8px 24px rgba(77, 124, 15, 0.25);
       text-decoration: none;
       color: var(--navy);
     }
     .btn-outline {
-      border: 1px solid rgba(245, 240, 232, 0.25);
+      border: 1px solid rgba(13, 13, 26, 0.2);
       color: var(--cream);
       background: transparent;
     }
@@ -255,8 +256,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(232, 168, 56, 0.028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(232, 168, 56, 0.028) 1px, transparent 1px);
+        linear-gradient(rgba(77, 124, 15, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77, 124, 15, 0.04) 1px, transparent 1px);
       background-size: 64px 64px;
       pointer-events: none;
     }
@@ -270,7 +271,7 @@
       transform: translateY(-50%);
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(155, 140, 196, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(180, 83, 9, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -386,6 +387,7 @@
         transparent 60%,
         var(--gold) 100%
       );
+      filter: blur(0.5px);
       animation: spin-ring 7s linear infinite;
     }
     .hero-photo-ring::after {
@@ -428,8 +430,8 @@
        ============================================================ */
     #stats {
       background: var(--navy-card);
-      border-top: 1px solid rgba(232, 168, 56, 0.09);
-      border-bottom: 1px solid rgba(232, 168, 56, 0.09);
+      border-top: 1px solid rgba(77, 124, 15, 0.1);
+      border-bottom: 1px solid rgba(77, 124, 15, 0.1);
       padding: 3.5rem 9%;
     }
 
@@ -442,7 +444,7 @@
     .stat-item {
       padding: 0.5rem 2rem;
       text-align: center;
-      border-right: 1px solid rgba(232, 168, 56, 0.1);
+      border-right: 1px solid rgba(77, 124, 15, 0.1);
     }
     .stat-item:last-child { border-right: none; }
     .stat-item:first-child { padding-left: 0; }
@@ -528,7 +530,7 @@
        ============================================================ */
     #experience {
       padding: var(--pad-section);
-      background: rgba(26, 43, 60, 0.45);
+      background: rgba(245, 239, 230, 0.7);
     }
 
     .chapter-group { margin-bottom: 2.5rem; }
@@ -545,9 +547,9 @@
       border-radius: 100px;
       margin-bottom: 1.75rem;
     }
-    .ch-scientist  { background: rgba(155,140,196,0.12); color: var(--lavender); border: 1px solid rgba(155,140,196,0.28); }
-    .ch-consultant { background: rgba(232,168,56,0.1);   color: var(--gold);     border: 1px solid rgba(232,168,56,0.25); }
-    .ch-builder    { background: rgba(46,213,115,0.09);  color: var(--green);    border: 1px solid rgba(46,213,115,0.25); }
+    .ch-scientist  { background: rgba(21,128,61,0.08);   color: var(--green);    border: 1px solid rgba(21,128,61,0.25); }
+    .ch-consultant { background: rgba(202,138,4,0.08);   color: #A16207;         border: 1px solid rgba(202,138,4,0.28); }
+    .ch-builder    { background: rgba(77,124,15,0.08);   color: var(--gold);     border: 1px solid rgba(77,124,15,0.25); }
 
     /* Timeline */
     .timeline {
@@ -561,7 +563,7 @@
       top: 0.75rem;
       bottom: 0;
       width: 1px;
-      background: linear-gradient(to bottom, rgba(232,168,56,0.6), rgba(232,168,56,0.05));
+      background: linear-gradient(to bottom, rgba(77,124,15,0.5), rgba(77,124,15,0.05));
     }
 
     .t-item {
@@ -586,7 +588,7 @@
     }
     .t-item:hover .t-dot {
       background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(232,168,56,0.18);
+      box-shadow: 0 0 0 4px rgba(77,124,15,0.18);
     }
 
     .t-card {
@@ -639,11 +641,11 @@
     .t-company {
       font-size: 0.84rem;
       font-weight: 500;
-      color: var(--lavender);
+      color: var(--green);
       margin-bottom: 1rem;
     }
     .t-company span { color: var(--cream-muted); font-weight: 400; font-size: 0.79rem; }
-    .t-company a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(232,168,56,0.3); transition: border-color 0.2s, color 0.2s; }
+    .t-company a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(21,128,61,0.3); transition: border-color 0.2s, color 0.2s; }
     .t-company a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
     .t-bullets {
@@ -731,7 +733,7 @@
        ============================================================ */
     #beyond {
       padding: var(--pad-section);
-      background: rgba(26,43,60,0.45);
+      background: rgba(245, 239, 230, 0.7);
     }
 
     .beyond-grid {
@@ -743,7 +745,7 @@
 
     .beyond-card {
       background: var(--navy-card);
-      border: 1px solid rgba(155,140,196,0.1);
+      border: 1px solid rgba(77,124,15,0.1);
       border-radius: 13px;
       padding: 2rem 1.65rem;
       text-align: center;
@@ -751,7 +753,7 @@
     }
     .beyond-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(155,140,196,0.3);
+      border-color: rgba(77,124,15,0.22);
     }
 
     /* Map card */
@@ -771,7 +773,7 @@
       width: calc(100% + 3.3rem);
     }
     .leaflet-tooltip.map-tip {
-      background: var(--navy-card);
+      background: #FFFFFF;
       border: 1px solid var(--gold);
       color: var(--cream);
       font-family: var(--font-body);
@@ -779,7 +781,7 @@
       font-weight: 500;
       padding: 3px 8px;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 8px rgba(77,124,15,0.12);
     }
     .leaflet-tooltip.map-tip::before { border-top-color: var(--gold); }
 
@@ -843,7 +845,7 @@
     .project-detail {
       margin-top: 1.25rem;
       padding-top: 1.25rem;
-      border-top: 1px solid rgba(155,140,196,0.15);
+      border-top: 1px solid rgba(77,124,15,0.1);
       display: none;
     }
     .project-card.is-open .project-detail { display: block; }
@@ -888,7 +890,7 @@
       line-height: 1.6;
     }
     .talk-divider {
-      border: none; border-top: 1px solid rgba(155,140,196,0.15);
+      border: none; border-top: 1px solid rgba(77,124,15,0.1);
       margin: 1.2rem 0;
     }
 
@@ -914,7 +916,7 @@
     .edu-card:hover { border-color: rgba(232,168,56,0.22); }
 
     .edu-degree { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--cream); margin-bottom: 0.2rem; }
-    .edu-school  { font-size: 0.88rem; font-weight: 500; color: var(--lavender); margin-bottom: 0.2rem; }
+    .edu-school  { font-size: 0.88rem; font-weight: 500; color: var(--green); margin-bottom: 0.2rem; }
     .edu-year    { font-size: 0.77rem; color: var(--cream-muted); }
 
     /* ============================================================
@@ -962,9 +964,9 @@
       font-weight: 500;
       text-decoration: none;
       transition: var(--transition);
-      border: 1px solid rgba(245,240,232,0.14);
+      border: 1px solid rgba(13,13,26,0.15);
       color: var(--cream);
-      background: rgba(255,255,255,0.03);
+      background: rgba(77,124,15,0.04);
     }
     .social-btn:hover {
       border-color: var(--gold);
@@ -996,7 +998,7 @@
       grid-template-columns: 130px 1fr;
       gap: 0 2.5rem;
       padding: 1.75rem 0;
-      border-bottom: 1px solid rgba(245,240,232,0.07);
+      border-bottom: 1px solid rgba(77,124,15,0.1);
     }
     .log-entry:last-child { border-bottom: none; }
 
@@ -1030,7 +1032,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: rgba(232,168,56,0.4);
+      color: rgba(77,124,15,0.4);
       font-size: 0.75rem;
     }
 
@@ -1048,8 +1050,8 @@
       padding: 1.6rem 9%;
       text-align: center;
       font-size: 0.77rem;
-      color: rgba(168,160,153,0.45);
-      border-top: 1px solid rgba(232,168,56,0.06);
+      color: rgba(107,114,128,0.7);
+      border-top: 1px solid rgba(77,124,15,0.08);
     }
     footer a { color: var(--gold); opacity: 0.7; }
     footer a:hover { opacity: 1; }
@@ -1093,19 +1095,99 @@
       #about { grid-template-columns: 1fr; gap: 3.5rem; }
       .wins-grid, .beyond-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
-      .stat-item { border-right: none; border-bottom: 1px solid rgba(232,168,56,0.09); padding: 1.25rem; }
+      .stat-item { border-right: none; border-bottom: 1px solid rgba(77,124,15,0.1); padding: 1.25rem; }
       .stat-item:last-child, .stat-item:nth-child(2n) { border-bottom: none; }
     }
 
     @media (max-width: 700px) {
       :root { --pad-section: 3.5rem 5%; }
       nav { padding: 1rem 5%; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,27,42,0.97); padding: 1.5rem 5%; gap: 1.25rem; border-bottom: 1px solid rgba(232,168,56,0.1); }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,247,242,0.97); padding: 1.5rem 5%; gap: 1.25rem; border-bottom: 1px solid rgba(77,124,15,0.12); }
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
       .wins-grid, .beyond-grid, .edu-grid, .attr-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .t-header { flex-direction: column; gap: 0.4rem; }
+    }
+
+    /* ============================================================
+       THEME TOGGLE BUTTON
+       ============================================================ */
+    #theme-toggle {
+      background: none;
+      border: 1.5px solid var(--cream-muted);
+      color: var(--cream-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+    #theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ============================================================
+       BLUE THEME OVERRIDE (navy / gold)
+       ============================================================ */
+    [data-theme="blue"] {
+      --navy:        #0D1B2A;
+      --navy-card:   #1A2B3C;
+      --navy-light:  #243447;
+      --cream:       #F5F0E8;
+      --cream-muted: #A8A099;
+      --gold:        #E8A838;
+      --gold-light:  #F5C96A;
+      --lavender:    #9B8CC4;
+      --green:       #2ed573;
+    }
+    [data-theme="blue"] nav {
+      background: rgba(13,27,42,0.88);
+      border-bottom: 1px solid rgba(232,168,56,0.1);
+      box-shadow: none;
+    }
+    [data-theme="blue"] #hero::before {
+      background-image:
+        linear-gradient(rgba(232,168,56,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,168,56,0.028) 1px, transparent 1px);
+    }
+    [data-theme="blue"] #hero::after {
+      background: radial-gradient(circle, rgba(155,140,196,0.1) 0%, transparent 70%);
+    }
+    [data-theme="blue"] #experience,
+    [data-theme="blue"] #beyond { background: rgba(26,43,60,0.45); }
+    [data-theme="blue"] #stats {
+      border-top: 1px solid rgba(232,168,56,0.09);
+      border-bottom: 1px solid rgba(232,168,56,0.09);
+    }
+    [data-theme="blue"] .stat-item { border-right-color: rgba(232,168,56,0.1); }
+    [data-theme="blue"] .timeline::before {
+      background: linear-gradient(to bottom, rgba(232,168,56,0.6), rgba(232,168,56,0.05));
+    }
+    [data-theme="blue"] .t-item:hover .t-dot { box-shadow: 0 0 0 4px rgba(232,168,56,0.18); }
+    [data-theme="blue"] .ch-scientist  { background: rgba(155,140,196,0.12); color: var(--lavender); border-color: rgba(155,140,196,0.28); }
+    [data-theme="blue"] .ch-consultant { background: rgba(232,168,56,0.1);   color: var(--gold);     border-color: rgba(232,168,56,0.25); }
+    [data-theme="blue"] .ch-builder    { background: rgba(46,213,115,0.09);  color: var(--green);    border-color: rgba(46,213,115,0.25); }
+    [data-theme="blue"] .t-company { color: var(--lavender); }
+    [data-theme="blue"] .t-company a { border-bottom-color: rgba(232,168,56,0.3); }
+    [data-theme="blue"] .edu-school { color: var(--lavender); }
+    [data-theme="blue"] footer { color: rgba(168,160,153,0.45); border-top-color: rgba(232,168,56,0.06); }
+    [data-theme="blue"] .social-btn { background: rgba(255,255,255,0.03); border-color: rgba(245,240,232,0.14); }
+    [data-theme="blue"] .log-entry { border-bottom-color: rgba(245,240,232,0.07); }
+    [data-theme="blue"] .log-bullets li::before { color: rgba(232,168,56,0.4); }
+    [data-theme="blue"] .btn-gold:hover { box-shadow: 0 8px 24px rgba(232,168,56,0.25); }
+    [data-theme="blue"] .btn-outline { border-color: rgba(245,240,232,0.25); }
+    [data-theme="blue"] .beyond-card { border-color: rgba(155,140,196,0.1); }
+    [data-theme="blue"] .beyond-card:hover { border-color: rgba(155,140,196,0.3); }
+    [data-theme="blue"] .project-detail { border-top-color: rgba(155,140,196,0.15); }
+    [data-theme="blue"] .talk-divider { border-top-color: rgba(155,140,196,0.15); }
+    [data-theme="blue"] .leaflet-tooltip.map-tip { background: var(--navy-card); box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+    @media (max-width: 700px) {
+      [data-theme="blue"] .nav-links { background: rgba(13,27,42,0.97); border-bottom-color: rgba(232,168,56,0.1); }
+      [data-theme="blue"] .stat-item { border-bottom-color: rgba(232,168,56,0.09); }
     }
   </style>
 </head>
@@ -1123,6 +1205,9 @@
     <li><a href="#exploring">What I'm Exploring</a></li>
     <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
   </ul>
+  <button id="theme-toggle" aria-label="Switch theme" title="Switch to navy theme">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+  </button>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
     <i class="fa fa-bars"></i>
   </button>
@@ -1650,6 +1735,9 @@
      =============================================================== -->
 <script>
 (function() {
+  let canvasRgb = '77, 124, 15';
+  window.setCanvasColor = function(rgb) { canvasRgb = rgb; };
+
   const canvas = document.getElementById('hero-canvas');
   const ctx = canvas.getContext('2d');
   const NODE_COUNT = 28;
@@ -1677,16 +1765,11 @@
 
   function draw() {
     ctx.clearRect(0, 0, w, h);
-
-    // Move nodes, bounce off edges
     nodes.forEach(n => {
-      n.x += n.vx;
-      n.y += n.vy;
+      n.x += n.vx; n.y += n.vy;
       if (n.x < 0 || n.x > w) n.vx *= -1;
       if (n.y < 0 || n.y > h) n.vy *= -1;
     });
-
-    // Draw connecting lines
     for (let i = 0; i < nodes.length; i++) {
       for (let j = i + 1; j < nodes.length; j++) {
         const dx = nodes[i].x - nodes[j].x;
@@ -1695,7 +1778,7 @@
         if (dist < MAX_DIST) {
           const alpha = (1 - dist / MAX_DIST) * 0.55;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(232, 168, 56, ${alpha})`;
+          ctx.strokeStyle = `rgba(${canvasRgb}, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -1703,15 +1786,12 @@
         }
       }
     }
-
-    // Draw nodes
     nodes.forEach(n => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(232, 168, 56, 0.7)';
+      ctx.fillStyle = `rgba(${canvasRgb}, 0.7)`;
       ctx.fill();
     });
-
     requestAnimationFrame(draw);
   }
 
@@ -1782,6 +1862,33 @@
   }, { passive: true });
   backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+  // ── Theme toggle ──────────────────────────────────────────────
+  const themeToggleBtn = document.getElementById('theme-toggle');
+
+  function applyTheme(theme) {
+    if (theme === 'blue') {
+      document.documentElement.setAttribute('data-theme', 'blue');
+      themeToggleBtn.title = 'Switch to olive theme';
+      window.setCanvasColor('232, 168, 56');
+      window.setMapTheme('blue');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeToggleBtn.title = 'Switch to navy theme';
+      window.setCanvasColor('77, 124, 15');
+      window.setMapTheme('olive');
+    }
+    localStorage.setItem('portfolioTheme', theme);
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'olive';
+    applyTheme(current === 'blue' ? 'olive' : 'blue');
+  });
+
+  // Restore saved preference on load
+  const savedTheme = localStorage.getItem('portfolioTheme') || 'olive';
+  if (savedTheme === 'blue') applyTheme('blue');
+
   // ── Travel map ────────────────────────────────────────────────
   const travelMap = L.map('travel-map', {
     center: [30, 15],
@@ -1792,83 +1899,95 @@
     maxBounds: [[-75, -200], [85, 200]],
     maxBoundsViscosity: 1.0
   });
-
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd', maxZoom: 19
-  }).addTo(travelMap);
   travelMap.setMinZoom(2);
   setTimeout(() => travelMap.invalidateSize(), 300);
 
-  const pinLived   = { radius: 7, fillColor: '#2ed573', color: '#7BED9F', weight: 1.5, opacity: 1, fillOpacity: 0.9 };
-  const pinVisited = { radius: 6, fillColor: '#E8A838', color: '#F5C96A', weight: 1.5, opacity: 1, fillOpacity: 0.85 };
-
   const places = [
-    // Lived
-    { lat: 19.0760,  lng: 72.8777,   name: 'Mumbai  ·  grew up here',    p: pinLived },
-    { lat: 23.2599,  lng: 77.4126,   name: 'Bhopal  ·  lived',           p: pinLived },
-    { lat: 35.7796,  lng: -78.6382,  name: 'Raleigh, NC  ·  lived',      p: pinLived },
-    { lat: 39.7392,  lng: -104.9903, name: 'Denver, CO  ·  lived',       p: pinLived },
-    { lat: 34.0522,  lng: -118.2437, name: 'Los Angeles, CA  ·  lived',  p: pinLived },
-    { lat: 37.7749,  lng: -122.4194, name: 'San Francisco, CA  ·  lived',p: pinLived },
-    { lat: 38.9072,  lng: -77.0369,  name: 'Washington, DC  ·  home',    p: pinLived },
-    // North America — visited
-    { lat: 40.7128,  lng: -74.0060,  name: 'New York City, NY',   p: pinVisited },
-    { lat: 30.2672,  lng: -97.7431,  name: 'Austin, TX',          p: pinVisited },
-    { lat: 42.3601,  lng: -71.0589,  name: 'Boston, MA',          p: pinVisited },
-    { lat: 41.8781,  lng: -87.6298,  name: 'Chicago, IL',         p: pinVisited },
-    { lat: 39.9612,  lng: -82.9988,  name: 'Columbus, OH',        p: pinVisited },
-    { lat: 30.3322,  lng: -81.6557,  name: 'Jacksonville, FL',    p: pinVisited },
-    { lat: 47.6062,  lng: -122.3321, name: 'Seattle, WA',         p: pinVisited },
-    { lat: 33.7490,  lng: -84.3880,  name: 'Atlanta, GA',         p: pinVisited },
-    { lat: 18.4655,  lng: -66.1057,  name: 'Puerto Rico',         p: pinVisited },
-    { lat: 18.5601,  lng: -68.3725,  name: 'Punta Cana',          p: pinVisited },
-    { lat: 24.1426,  lng: -110.3128, name: 'Baja California',     p: pinVisited },
-    { lat: 32.7157,  lng: -117.1611, name: 'San Diego, CA',       p: pinVisited },
-    { lat: 37.6819,  lng: -121.7680, name: 'Livermore, CA',       p: pinVisited },
-    { lat: 51.1784,  lng: -115.5708, name: 'Banff, Canada',       p: pinVisited },
-    { lat: 51.0447,  lng: -114.0719, name: 'Calgary, Canada',     p: pinVisited },
-    { lat: 45.6066,  lng: -73.7124,  name: 'Laval, Québec',       p: pinVisited },
-    { lat: 21.1619,  lng: -86.8515,  name: 'Cancún, Mexico',      p: pinVisited },
-    // Europe
-    { lat: 41.3851,  lng: 2.1734,    name: 'Barcelona, Spain',    p: pinVisited },
-    { lat: 52.5200,  lng: 13.4050,   name: 'Berlin, Germany',     p: pinVisited },
-    { lat: 50.9333,  lng: 6.9500,    name: 'Cologne, Germany',    p: pinVisited },
-    { lat: 53.3498,  lng: -6.2603,   name: 'Dublin, Ireland',     p: pinVisited },
-    { lat: 47.2692,  lng: 11.4041,   name: 'Innsbruck, Austria',  p: pinVisited },
-    { lat: 41.0082,  lng: 28.9784,   name: 'Istanbul, Turkey',    p: pinVisited },
-    { lat: 51.5074,  lng: -0.1278,   name: 'London, UK',          p: pinVisited },
-    { lat: 48.8566,  lng: 2.3522,    name: 'Paris, France',       p: pinVisited },
-    { lat: 47.4979,  lng: 19.0402,   name: 'Budapest, Hungary',   p: pinVisited },
-    { lat: 41.9028,  lng: 12.4964,   name: 'Rome, Italy',         p: pinVisited },
-    { lat: 45.4642,  lng: 9.1900,    name: 'Milan, Italy',        p: pinVisited },
-    { lat: 41.9035,  lng: 12.4534,   name: 'Vatican City',        p: pinVisited },
-    { lat: 48.2082,  lng: 16.3738,   name: 'Vienna, Austria',     p: pinVisited },
-    { lat: 47.8095,  lng: 13.0550,   name: 'Salzburg, Austria',   p: pinVisited },
-    { lat: 37.9838,  lng: 23.7275,   name: 'Athens, Greece',      p: pinVisited },
-    // India — visited
-    { lat: 12.9716,  lng: 77.5946,   name: 'Bangalore, India',    p: pinVisited },
-    { lat: 28.6139,  lng: 77.2090,   name: 'New Delhi, India',    p: pinVisited },
-    { lat: 18.5204,  lng: 73.8567,   name: 'Pune, India',         p: pinVisited },
-    // East & SE Asia
-    { lat: 25.0330,  lng: 121.5654,  name: 'Taipei, Taiwan',      p: pinVisited },
-    { lat: 35.6762,  lng: 139.6503,  name: 'Tokyo, Japan',        p: pinVisited },
-    { lat: 35.4437,  lng: 139.6380,  name: 'Yokohama, Japan',     p: pinVisited },
-    { lat: 35.0116,  lng: 135.7681,  name: 'Kyoto, Japan',        p: pinVisited },
-    { lat: 39.9042,  lng: 116.4074,  name: 'Beijing, China',      p: pinVisited },
-    { lat: 31.2304,  lng: 121.4737,  name: 'Shanghai, China',     p: pinVisited },
-    { lat: 23.1291,  lng: 113.2644,  name: 'Guangzhou, China',    p: pinVisited },
-    { lat: 22.3193,  lng: 114.1694,  name: 'Hong Kong',           p: pinVisited },
-    { lat: 34.3416,  lng: 108.9398,  name: "Xi'an, China",        p: pinVisited },
-    { lat: 37.5665,  lng: 126.9780,  name: 'Seoul, South Korea',  p: pinVisited },
-    // Islands
-    { lat: 4.1755,   lng: 73.5093,   name: 'Maldives',            p: pinVisited },
+    { lat: 19.0760,  lng: 72.8777,   name: 'Mumbai  ·  grew up here',     type: 'lived' },
+    { lat: 23.2599,  lng: 77.4126,   name: 'Bhopal  ·  lived',            type: 'lived' },
+    { lat: 35.7796,  lng: -78.6382,  name: 'Raleigh, NC  ·  lived',       type: 'lived' },
+    { lat: 39.7392,  lng: -104.9903, name: 'Denver, CO  ·  lived',        type: 'lived' },
+    { lat: 34.0522,  lng: -118.2437, name: 'Los Angeles, CA  ·  lived',   type: 'lived' },
+    { lat: 37.7749,  lng: -122.4194, name: 'San Francisco, CA  ·  lived', type: 'lived' },
+    { lat: 38.9072,  lng: -77.0369,  name: 'Washington, DC  ·  home',     type: 'lived' },
+    { lat: 40.7128,  lng: -74.0060,  name: 'New York City, NY',    type: 'visited' },
+    { lat: 30.2672,  lng: -97.7431,  name: 'Austin, TX',           type: 'visited' },
+    { lat: 42.3601,  lng: -71.0589,  name: 'Boston, MA',           type: 'visited' },
+    { lat: 41.8781,  lng: -87.6298,  name: 'Chicago, IL',          type: 'visited' },
+    { lat: 39.9612,  lng: -82.9988,  name: 'Columbus, OH',         type: 'visited' },
+    { lat: 30.3322,  lng: -81.6557,  name: 'Jacksonville, FL',     type: 'visited' },
+    { lat: 47.6062,  lng: -122.3321, name: 'Seattle, WA',          type: 'visited' },
+    { lat: 33.7490,  lng: -84.3880,  name: 'Atlanta, GA',          type: 'visited' },
+    { lat: 18.4655,  lng: -66.1057,  name: 'Puerto Rico',          type: 'visited' },
+    { lat: 18.5601,  lng: -68.3725,  name: 'Punta Cana',           type: 'visited' },
+    { lat: 24.1426,  lng: -110.3128, name: 'Baja California',      type: 'visited' },
+    { lat: 32.7157,  lng: -117.1611, name: 'San Diego, CA',        type: 'visited' },
+    { lat: 37.6819,  lng: -121.7680, name: 'Livermore, CA',        type: 'visited' },
+    { lat: 51.1784,  lng: -115.5708, name: 'Banff, Canada',        type: 'visited' },
+    { lat: 51.0447,  lng: -114.0719, name: 'Calgary, Canada',      type: 'visited' },
+    { lat: 45.6066,  lng: -73.7124,  name: 'Laval, Québec',        type: 'visited' },
+    { lat: 21.1619,  lng: -86.8515,  name: 'Cancún, Mexico',       type: 'visited' },
+    { lat: 41.3851,  lng: 2.1734,    name: 'Barcelona, Spain',     type: 'visited' },
+    { lat: 52.5200,  lng: 13.4050,   name: 'Berlin, Germany',      type: 'visited' },
+    { lat: 50.9333,  lng: 6.9500,    name: 'Cologne, Germany',     type: 'visited' },
+    { lat: 53.3498,  lng: -6.2603,   name: 'Dublin, Ireland',      type: 'visited' },
+    { lat: 47.2692,  lng: 11.4041,   name: 'Innsbruck, Austria',   type: 'visited' },
+    { lat: 41.0082,  lng: 28.9784,   name: 'Istanbul, Turkey',     type: 'visited' },
+    { lat: 51.5074,  lng: -0.1278,   name: 'London, UK',           type: 'visited' },
+    { lat: 48.8566,  lng: 2.3522,    name: 'Paris, France',        type: 'visited' },
+    { lat: 47.4979,  lng: 19.0402,   name: 'Budapest, Hungary',    type: 'visited' },
+    { lat: 41.9028,  lng: 12.4964,   name: 'Rome, Italy',          type: 'visited' },
+    { lat: 45.4642,  lng: 9.1900,    name: 'Milan, Italy',         type: 'visited' },
+    { lat: 41.9035,  lng: 12.4534,   name: 'Vatican City',         type: 'visited' },
+    { lat: 48.2082,  lng: 16.3738,   name: 'Vienna, Austria',      type: 'visited' },
+    { lat: 47.8095,  lng: 13.0550,   name: 'Salzburg, Austria',    type: 'visited' },
+    { lat: 37.9838,  lng: 23.7275,   name: 'Athens, Greece',       type: 'visited' },
+    { lat: 12.9716,  lng: 77.5946,   name: 'Bangalore, India',     type: 'visited' },
+    { lat: 28.6139,  lng: 77.2090,   name: 'New Delhi, India',     type: 'visited' },
+    { lat: 18.5204,  lng: 73.8567,   name: 'Pune, India',          type: 'visited' },
+    { lat: 25.0330,  lng: 121.5654,  name: 'Taipei, Taiwan',       type: 'visited' },
+    { lat: 35.6762,  lng: 139.6503,  name: 'Tokyo, Japan',         type: 'visited' },
+    { lat: 35.4437,  lng: 139.6380,  name: 'Yokohama, Japan',      type: 'visited' },
+    { lat: 35.0116,  lng: 135.7681,  name: 'Kyoto, Japan',         type: 'visited' },
+    { lat: 39.9042,  lng: 116.4074,  name: 'Beijing, China',       type: 'visited' },
+    { lat: 31.2304,  lng: 121.4737,  name: 'Shanghai, China',      type: 'visited' },
+    { lat: 23.1291,  lng: 113.2644,  name: 'Guangzhou, China',     type: 'visited' },
+    { lat: 22.3193,  lng: 114.1694,  name: 'Hong Kong',            type: 'visited' },
+    { lat: 34.3416,  lng: 108.9398,  name: "Xi'an, China",         type: 'visited' },
+    { lat: 37.5665,  lng: 126.9780,  name: 'Seoul, South Korea',   type: 'visited' },
+    { lat: 4.1755,   lng: 73.5093,   name: 'Maldives',             type: 'visited' },
   ];
 
-  places.forEach(p => {
-    L.circleMarker([p.lat, p.lng], p.p)
-      .bindTooltip(p.name, { permanent: false, direction: 'top', className: 'map-tip' })
-      .addTo(travelMap);
-  });
+  let mapTileLayer, pinMarkers = [];
+
+  window.setMapTheme = function(theme) {
+    if (mapTileLayer) travelMap.removeLayer(mapTileLayer);
+    mapTileLayer = L.tileLayer(
+      theme === 'blue'
+        ? 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png'
+        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      { subdomains: 'abcd', maxZoom: 19 }
+    ).addTo(travelMap);
+
+    pinMarkers.forEach(m => travelMap.removeLayer(m));
+    pinMarkers = [];
+
+    const pinLived   = theme === 'blue'
+      ? { radius: 7, fillColor: '#2ed573', color: '#7BED9F', weight: 1.5, opacity: 1, fillOpacity: 0.9 }
+      : { radius: 8, fillColor: '#FAF7F2', color: '#4D7C0F', weight: 2.5, opacity: 1, fillOpacity: 0.9 };
+    const pinVisited = theme === 'blue'
+      ? { radius: 6, fillColor: '#E8A838', color: '#F5C96A', weight: 1.5, opacity: 1, fillOpacity: 0.85 }
+      : { radius: 6, fillColor: '#4D7C0F', color: '#65A30D', weight: 1.5, opacity: 1, fillOpacity: 0.85 };
+
+    places.forEach(p => {
+      const m = L.circleMarker([p.lat, p.lng], p.type === 'lived' ? pinLived : pinVisited)
+        .bindTooltip(p.name, { permanent: false, direction: 'top', className: 'map-tip' })
+        .addTo(travelMap);
+      pinMarkers.push(m);
+    });
+  };
+
+  window.setMapTheme('olive');
 </script>
 
 </body>
