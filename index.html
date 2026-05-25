@@ -1877,17 +1877,12 @@
       window.setCanvasColor('77, 124, 15');
       window.setMapTheme('olive');
     }
-    localStorage.setItem('portfolioTheme', theme);
   }
 
   themeToggleBtn.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme') || 'olive';
     applyTheme(current === 'blue' ? 'olive' : 'blue');
   });
-
-  // Restore saved preference on load
-  const savedTheme = localStorage.getItem('portfolioTheme') || 'olive';
-  if (savedTheme === 'blue') applyTheme('blue');
 
   // ── Travel map ────────────────────────────────────────────────
   const travelMap = L.map('travel-map', {
