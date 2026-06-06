@@ -753,10 +753,19 @@
 
     .beyond-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1.35rem;
       margin-top: 0.5rem;
     }
+    /* Row 1: Soundburst hero + Talks */
+    .beyond-grid > :nth-child(1) { grid-column: span 4; text-align: left; }
+    .beyond-grid > :nth-child(2) { grid-column: span 2; }
+    /* Row 2: BMW + Whisky + Lifelong Learner */
+    .beyond-grid > :nth-child(3) { grid-column: span 2; }
+    .beyond-grid > :nth-child(4) { grid-column: span 2; }
+    .beyond-grid > :nth-child(5) { grid-column: span 2; }
+    /* Row 3: Map full width */
+    .beyond-grid > :nth-child(6) { grid-column: span 6; }
 
     .beyond-card {
       background: var(--navy-card);
@@ -1111,7 +1120,14 @@
       .hero-tagline { margin: 0 auto 2rem; }
       .hero-photo-wrap { order: -1; }
       #about { grid-template-columns: 1fr; gap: 3.5rem; }
-      .wins-grid, .beyond-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
+      .wins-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
+      .beyond-grid { grid-template-columns: repeat(2, 1fr); }
+      .beyond-grid > :nth-child(1) { grid-column: span 2; }
+      .beyond-grid > :nth-child(2),
+      .beyond-grid > :nth-child(3),
+      .beyond-grid > :nth-child(4),
+      .beyond-grid > :nth-child(5) { grid-column: span 1; }
+      .beyond-grid > :nth-child(6) { grid-column: span 2; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .stat-item { border-right: none; border-bottom: 1px solid rgba(77,124,15,0.1); padding: 1.25rem; }
       .stat-item:last-child, .stat-item:nth-child(2n) { border-bottom: none; }
@@ -1124,6 +1140,7 @@
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
       .wins-grid, .beyond-grid, .edu-grid, .attr-grid { grid-template-columns: 1fr; }
+      .beyond-grid > :nth-child(n) { grid-column: span 1; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .t-header { flex-direction: column; gap: 0.4rem; }
     }
@@ -1613,14 +1630,9 @@
       </div>
     </div>
     <div class="beyond-card fade-up d4">
-      <span class="beyond-icon">🗣️</span>
-      <div class="beyond-title">Natural Polyglot</div>
-      <div class="beyond-text">English, Hindi, Marathi, Mandarin, and French. Learned Mandarin to communicate directly with customers in Taiwan, and it changed how I build trust globally.</div>
-    </div>
-    <div class="beyond-card fade-up d5">
       <span class="beyond-icon">📚</span>
       <div class="beyond-title">Lifelong Learner</div>
-      <div class="beyond-text">For over a decade, I've made a habit of picking up 2-3 new skills every year: from learning to swim at 29 after nearly drowning as a kid, to going from 125 to 180 lbs through strength training, to picking up golf and the craft of parenting in 2025. Reinvention isn't a reset; it's a rhythm.</div>
+      <div class="beyond-text">For over a decade, I've made a habit of picking up 2-3 new skills every year: from learning to swim at 29 after nearly drowning as a kid, to going from 125 to 180 lbs through strength training, to picking up golf and the craft of parenting in 2025. Along the way I picked up five languages: English, Hindi, Marathi, Mandarin, and French. Reinvention isn't a reset; it's a rhythm.</div>
     </div>
     <div class="beyond-card map-card fade-up d6">
       <div class="map-card-header">
