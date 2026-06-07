@@ -873,7 +873,9 @@
       padding-top: 1.25rem;
       border-top: 1px solid rgba(77,124,15,0.1);
       display: none;
+      overflow: hidden;
     }
+    .project-detail img { max-width: 100%; height: auto; display: block; }
     .project-card.is-open .project-detail { display: block; }
     .pd-row {
       display: grid;
@@ -1840,10 +1842,7 @@
 <script>
   // ── Project card toggle (all expand / collapse together) ──────
   function toggleProject(card) {
-    const isOpen = card.classList.contains('is-open');
-    document.querySelectorAll('.project-card').forEach(c => {
-      isOpen ? c.classList.remove('is-open') : c.classList.add('is-open');
-    });
+    card.classList.toggle('is-open');
   }
 
   // ── Intersection Observer: fade-up + timeline items ──────────
