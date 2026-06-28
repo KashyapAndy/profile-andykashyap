@@ -2,7 +2,7 @@
 
 Personal portfolio and resume site for Anirudh Kashyap — Director of Solutions Engineering specializing in enterprise AI/ML go-to-market.
 
-🌐 **Live site:** [kashyapandy.github.io/profile-andykashyap](https://kashyapandy.github.io/profile-andykashyap/)
+**Live site:** [kashyapandy.github.io/profile-andykashyap](https://kashyapandy.github.io/profile-andykashyap/)
 
 ---
 
@@ -10,9 +10,9 @@ Personal portfolio and resume site for Anirudh Kashyap — Director of Solutions
 
 A modern, accomplishment-driven portfolio built to attract senior enterprise roles. Designed around a chronological career arc — not a designer portfolio.
 
-**Palette:** Deep navy · Amber gold · Lavender · Cream
-**Font:** [Outfit](https://fonts.google.com/specimen/Outfit) (single family, all weights)
-**Stack:** Pure HTML · CSS (Grid + Flexbox + Custom Properties) · Vanilla JS
+**Palette:** Warm olive · Amber · Stone · Cream  
+**Font:** [Satoshi](https://www.fontshare.com/fonts/satoshi) (single family, all weights)  
+**Stack:** Pure HTML · CSS (Grid + Flexbox + Custom Properties) · Vanilla JS · No build step
 
 ---
 
@@ -21,46 +21,28 @@ A modern, accomplishment-driven portfolio built to attract senior enterprise rol
 | Section | Description |
 |---|---|
 | **Hero** | Name, tagline, skill tags, LinkedIn / CV links |
-| **About** | Career story across 3 chapters: Chemical Engineer → Consultant → Solutions Leadership |
-| **Experience** | Chronological timeline with metrics-driven bullet points |
-| **Beyond Work** | Personal interests presented professionally |
-| **Education** | M.S. ChE UC Irvine · B.S. ChE Mumbai · General Assembly DS |
-| **Contact** | Email, phone, LinkedIn, CV download |
+| **My Journey** | Career story across 3 chapters: Chemical Engineer → Consultant → Solutions Leadership |
+| **Career Timeline** | Chronological roles with metrics-driven bullet points |
+| **Beyond Work** | Personal projects and interests presented professionally |
+| **AI Learning Log** | Curated log of what I'm reading, building, and exploring in AI |
+| **Education** | M.S. ChE UC Irvine · B.S. ChE Mumbai · General Assembly Data Science |
+| **Contact** | Email, LinkedIn, CV download |
+
+---
+
+## Beyond Work Projects
+
+| Project | Stack | Highlight |
+|---|---|---|
+| [Soundburst](https://github.com/KashyapAndy/Soundburst) | Swift · SwiftUI · AVAudioEngine | macOS menu-bar mic monitor — privacy-first, no data leaves the device |
+| [My BMW HUD](https://github.com/KashyapAndy/bmw-cost-of-ownership) | Tableau | 10 years of car expenses visualized; went viral on r/dataisbeautiful |
+| [TWE Whisky Pricing ML](https://github.com/KashyapAndy/twe-whisky-pricing-ml) | Python · NLP · scikit-learn | 1,500+ whiskies scraped and modeled; 0.7 accuracy on price-tier prediction |
 
 ---
 
 ## Local Development
 
-Requires [Node.js](https://nodejs.org/).
+No build step needed — it's a single HTML file.
 
 ```bash
 npx serve . -p 3000
-```
-
-Then open [http://localhost:3000](http://localhost:3000).
-
-A `.claude/launch.json` dev server config is included for use with Claude Code.
-
----
-
-## Deploying (GitHub Pages)
-
-1. Merge `portfolio-2026` branch into `master`
-2. Go to **Settings → Pages**
-3. Set Source to **Deploy from branch → `master` → `/ (root)`**
-4. Site will be live at `https://kashyapandy.github.io/profile-andykashyap/`
-
----
-
-## Files
-
-```
-index.html                  # Full site (single file — all CSS/JS inline)
-img/profile.jpg             # Professional headshot
-AnirudhKashyap_Resume.pdf   # CV (linked from Download CV buttons)
-.claude/launch.json         # Dev server config
-```
-
----
-
-© 2026 Anirudh Kashyap
