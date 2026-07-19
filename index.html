@@ -762,12 +762,14 @@
     /* Row 1: Soundburst hero + Talks */
     .beyond-grid > :nth-child(1) { grid-column: span 4; text-align: left; }
     .beyond-grid > :nth-child(2) { grid-column: span 2; }
-    /* Row 2: BMW + Whisky + Lifelong Learner */
+    /* Row 2: AK Health Visuals + BMW + Whisky */
     .beyond-grid > :nth-child(3) { grid-column: span 2; }
     .beyond-grid > :nth-child(4) { grid-column: span 2; }
     .beyond-grid > :nth-child(5) { grid-column: span 2; }
-    /* Row 3: Map full width */
+    /* Row 3: Lifelong Learner full width */
     .beyond-grid > :nth-child(6) { grid-column: span 6; }
+    /* Row 4: Map full width */
+    .beyond-grid > :nth-child(7) { grid-column: span 6; }
 
     .beyond-card {
       background: var(--navy-card);
@@ -1131,7 +1133,8 @@
       .beyond-grid > :nth-child(3),
       .beyond-grid > :nth-child(4),
       .beyond-grid > :nth-child(5) { grid-column: span 1; }
-      .beyond-grid > :nth-child(6) { grid-column: span 2; }
+      .beyond-grid > :nth-child(6),
+      .beyond-grid > :nth-child(7) { grid-column: span 2; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
       .stat-item { border-right: none; border-bottom: 1px solid rgba(77,124,15,0.1); padding: 1.25rem; }
       .stat-item:last-child, .stat-item:nth-child(2n) { border-bottom: none; }
@@ -1564,6 +1567,42 @@
       </div>
     </div>
     <div class="beyond-card project-card fade-up d2" onclick="toggleProject(this)">
+      <div class="project-year-badge">2026</div>
+      <div class="project-header">
+        <div class="project-app-icon-fallback"><i class="fa-solid fa-heart-pulse" style="color:var(--gold);font-size:1.2rem;"></i></div>
+        <div>
+          <div class="project-name">AK Health Visuals</div>
+          <div class="project-platform">Python · Claude API · Next.js</div>
+        </div>
+      </div>
+      <div class="beyond-text">A personal health dashboard turning 15 years of pathology PDFs into an interactive, longitudinal record: CBC panels, vitals, and metabolic markers tracked over a decade and a half.</div>
+      <div class="project-toggle-hint">
+        <i class="fa-solid fa-chevron-down"></i>
+        <span>Goal / Approach / Outcome</span>
+      </div>
+      <div class="project-detail">
+        <a href="img/health-dashboard.png" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+          <img src="img/health-dashboard.png" alt="AK Health Visuals dashboard, CBC hemoglobin trend" style="width:100%;border-radius:8px;margin-bottom:1.1rem;display:block;opacity:0.92;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.92'">
+        </a>
+        <div class="pd-row">
+          <span class="pd-label">Goal</span>
+          <span class="pd-val">Turn a drawer full of PDF lab reports spanning 15 years into a single interactive, longitudinal health record: no more digging through paper for a trend.</span>
+        </div>
+        <div class="pd-row">
+          <span class="pd-label">Approach</span>
+          <span class="pd-val">Python ingestion pipeline using the Claude API to extract dates, biomarker names, values, units, reference ranges, and flags from lab PDFs into a canonical SQLite registry normalized across labs and years. A FastAPI backend serves categories, time-series, and computed ratios (A/G, HDL/LDL) to a Next.js + Recharts frontend with inline expandable charts and a milestone timeline.</span>
+        </div>
+        <div class="pd-row">
+          <span class="pd-label">Outcome</span>
+          <span class="pd-val">A working dashboard covering 15 years of pathology, CBC, vitals, and metabolic data, with abnormal-value flagging, reference-band shading, and event annotations plotted against biomarker trends. Extended in July to track my wife's lab history too.</span>
+        </div>
+        <div class="pd-row">
+          <span class="pd-label">Repo</span>
+          <a href="https://github.com/KashyapAndy/ak-health-visuals" target="_blank" rel="noopener" class="pd-link" onclick="event.stopPropagation()">GitHub →</a>
+        </div>
+      </div>
+    </div>
+    <div class="beyond-card project-card fade-up d3" onclick="toggleProject(this)">
       <div class="project-year-badge">2020</div>
       <div class="project-header">
         <img src="img/bmw-dashboard.png" class="project-app-icon" alt="BMW dashboard preview" style="object-position: top left;">
@@ -1599,7 +1638,7 @@
         </div>
       </div>
     </div>
-    <div class="beyond-card project-card fade-up d3" onclick="toggleProject(this)">
+    <div class="beyond-card project-card fade-up d4" onclick="toggleProject(this)">
       <div class="project-year-badge">2018</div>
       <div class="project-header">
         <img src="img/twe-logo.svg" class="project-app-icon" alt="The Whisky Exchange" style="filter:invert(1) brightness(1.2);">
@@ -1633,7 +1672,7 @@
         </div>
       </div>
     </div>
-    <div class="beyond-card fade-up d4">
+    <div class="beyond-card fade-up d5">
       <span class="beyond-icon">📚</span>
       <div class="beyond-title">Lifelong Learner</div>
       <div class="beyond-text">For over a decade, I've made a habit of picking up 2-3 new skills every year: from learning to swim at 29 after nearly drowning as a kid, to going from 125 to 180 lbs through strength training, to picking up golf and the craft of parenting in 2025. Along the way I picked up five languages: English, Hindi, Marathi, Mandarin, and French. Reinvention isn't a reset; it's a rhythm.</div>
@@ -1659,6 +1698,20 @@
   </div>
 
   <div class="log-list">
+
+    <div class="log-entry fade-up">
+      <div class="log-month">Jul 2026</div>
+      <ul class="log-bullets">
+        <li>Extended AK Health Visuals to a second person: now tracking my wife's lab history alongside mine in the same dashboard</li>
+      </ul>
+    </div>
+
+    <div class="log-entry fade-up">
+      <div class="log-month">Jun 2026</div>
+      <ul class="log-bullets">
+        <li>Built AK Health Visuals: a pipeline from 15 years of raw health record PDFs to an interactive dashboard, using Claude API extraction, SQLite, FastAPI, and Next.js</li>
+      </ul>
+    </div>
 
     <div class="log-entry fade-up">
       <div class="log-month">May 2025</div>
